@@ -16,3 +16,15 @@ make install
 ## Using the provider
 
 See the [example](./examples/main.tf) directory for an example usage.
+
+## Importing DNS record
+
+To import a DNS record from GoDaddy, the ID should conform to the following syntax:
+
+`<domain>:<name>:<type>`
+
+Example
+
+```terraform
+terraform import domains_record.test_record test-domain.com:terraform:CNAME
+```
