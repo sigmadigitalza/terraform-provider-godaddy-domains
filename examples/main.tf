@@ -2,7 +2,7 @@ terraform {
   required_providers {
     godaddy-domains = {
       version = "1.0.0",
-      source = "sigmadigitalza/godaddy-domains"
+      source = "sigmadigital.io/godaddy/domains"
     }
   }
 }
@@ -19,7 +19,7 @@ data "domains_domain" "test_domain" {
   domain = "test-domain.com"
 }
 
-resource "domains_record" "terraform_record" {
+resource "domains_record" "test_record" {
   provider = "godaddy-domains"
 
   domain = data.domains_domain.test_domain.domain
